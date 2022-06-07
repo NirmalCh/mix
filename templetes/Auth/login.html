@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block title %} Account {% endblock title %} {% block content %}
+<div class="container">
+    <div class="jumbotron" style="margin-top: 10%; margin-left:10%">
+        <div class="container">
+            <div class="container" style="margin-left: 15%;margin-top:10px;">
+                Enter to the system..
+            </div>
+            <div class=" container " style="margin-left: 15%;margin-top:30px;">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label for="username"> Username:</label>
+                    <input type="text" id="username" name="username"> <br>
+                    <label for="password"> Password:</label>
+                    <input type="password" id="password" name="password"> <br>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 15%;margin-top:10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block title %} Register {% endblock title %} {% block content %}
+<div class="container">
+    <div class="jumbotron" style="margin-top: 50px;">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-row" style="margin-bottom:15px;">
+                <div class="col">
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="{{user.first_name}}">
+                </div>
+                <div class="col">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last name" id="last_name" name="last_name" value="{{user.last_name}}">
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" value="{{account.address}}">
+                </div>
+
+
+
+                <div class="form-group col-md-3">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="form-control" id="phone" name="phone" value="{{account.phone}}">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="date_of_birth">Date Of Birth</label>
+                    <input id="date_of_birth" type="date" class="form-control" name="dob" value="{{account.dob}}">
+
+
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="citizen_number">Citizenship Number</label>
+                    <input type="number" class="form-control" id="citizen_number" name="citizen_no" value="{{account.citizenship_no}}">
+                </div>
+            </div>
+            <div class="container" style="margin-left: 40%;">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>
+{% endblock content %}

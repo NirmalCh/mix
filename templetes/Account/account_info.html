@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} {{account.user.first_name}} {% endblock title %} {% block content %}
+
+<div class="container">
+    <div class="jumbotron" style="margin-top: 10%; margin-left:10%">
+        <div>
+
+
+        </div>
+        {{account.user.first_name}}
+        <br> {{account.address}} <br> {{account.phone}}
+    </div>
+</div>
+
+{% endblock content %}

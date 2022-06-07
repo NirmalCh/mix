@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} {% block title %} {{user.first_name}} {% endblock title %} {% block content %}
+<section id="profile">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="name">
+                <div class="container" style="margin-left: 20%;">
+                    <div style="height:20px; width:20px;">
+                        <img class="img" src="{{account.images_fields.url}}">
+
+                    </div>
+
+                    <br>
+                    <span>
+                    Name: {{user.first_name}} {{user.last_name}} </span>
+                    <br>
+                    <span>
+                    Username: {{user.username}}
+                </span>
+                    <br>
+                    <span>
+                    Email: {{user.email}}
+                </span>
+                    <br>
+                    <span>
+                    Date of Birth: {{account.dob}}
+                </span><br>
+                    <span>
+                    Citizenship Number: {{account.citizenship_no}}
+                </span>
+                    <br>
+                    <span>
+                    Phone: {{account.phone}} 
+                </span>
+                    <br>
+                    <span>
+                    Address: {{account.address}}
+                </span>
+                    <div style="margin-top: 20px; margin-left:70px;">
+                        <a href="{% url 'general_edit' %}" class="btn btn-primary"> Edit </a></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<style>
+    .img {
+        height: 50px;
+        width: 50px;
+    }
+</style>
+{% endblock content %}
